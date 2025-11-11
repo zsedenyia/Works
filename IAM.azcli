@@ -1,0 +1,16 @@
+az login
+
+az ad user create \
+  --display-name "John Doe" \
+  --user-principal-name johndoe@yourdomain.onmicrosoft.com \
+  --password "StrongPassword123!" \
+  --force-change-password-next-login true
+
+az ad group create \
+  --display-name "HR" \
+  --mail-nickname "HRGroup"
+
+az ad group member add \
+    --group "HR" \
+    --member-id $(az ad user show --id
+
