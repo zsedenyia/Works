@@ -1,0 +1,19 @@
+#Login to Azure portal
+az login
+#Create a new group - new name - new location
+az group create --name demo02 --location Swedencentral
+#create a new virtual machine in demo 02 resource group, ubuntu with ssh key
+az vm create --resource-group demo02 --name DemoVM --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys
+#Open port 80 for nginx webserver
+az vm open-port --resource-group demo02 --name DemoVM --port 80
+
+#delete The group with the vm in it
+az group delete --name demo02 --yes --no-wait
+
+
+
+
+
+Run the next command in Get-bash mode
+
+./provision_vm.sh -> this installs ubuntu with all the settings from all 3 file - scratchpad, cloud-init and provision
