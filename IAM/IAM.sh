@@ -9,7 +9,7 @@ az group create --name MyResourceGroup --location NorthEurope
 # Create a Blob Storage Account
 az storage account create --name mystorageaccount --resource-group MyResourceGroup --location NorthEurope --sku Standard_LRS
 # Create a Container in the Storage Account
-az storage container create --name mycontainer --account-name mystorageaccount
+az storage container create --name mycontainer --account-name mystorageacount  --public-access off  
 # Upload a file to the Container
 az storage blob upload --container-name mycontainer --file ./myfile.txt --name myfile.txt --account-name mystorageaccount
 # List Blobs in the Container
