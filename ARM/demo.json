@@ -4,7 +4,7 @@
 "parameters": {},
 "variables": {},
 "functions": [],
-"resources": [
+"resources": [    
     // Virtual Network and Subnet
     {
         "name": "DemoVirtualNetwork",
@@ -29,14 +29,17 @@
     },
     // Public IP
     {
-        "name": "DemoPublicIP",
-        "type": "Microsoft.Network/publicIPAddresses",
-        "apiVersion": "2023-04-01",
-        "location": "[resourceGroup().location]",
-        "properties": {
-            "publicIPAllocationMethod": "Dynamic"
-        }
-    },
+  "name": "DemoPublicIP",
+  "type": "Microsoft.Network/publicIPAddresses",
+  "apiVersion": "2023-04-01",
+  "location": "[resourceGroup().location]",
+  "sku": {
+    "name": "Standard"
+  },
+  "properties": {
+    "publicIPAllocationMethod": "Static"
+  }
+},
     // Network Security Group
     {
         "name": "DemoNSG",
