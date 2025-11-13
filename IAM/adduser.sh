@@ -1,1 +1,0 @@
-az ad user create --display-name "Alexandraa Zettervall" --user-principal-name alexandra@yourdomain.onmicrosoft.com --password "Jamie2019" --force-change-password-next-login true

@@ -1,3 +1,7 @@
+# demo 01 - create a resource group and a vm in Azure website
+
+# Demo 02 - create a resource group and a vm in Azure CLI
+
 #Login to Azure portal
 az login
 #Create a new group - new name - new location
