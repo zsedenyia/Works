@@ -1,0 +1,125 @@
+# Login to Azure
+az login
+
+# Create a resource group
+az group create --name ArmDemoRG --location NorthEurope
+
+# Deploy the ARM template
+az deployment group create --resource-group ArmDemoRG --template-file vm_arm_template.json
+
+{
+"$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+"contentVersion": "1.0.0.0",
+"parameters": {},
+"variables": {},
+"functions": [],
+"resources": [],
+"outputs": {}
+}
+
+// Virtual Network and Subnet
+    {
+        "name": "DemoVirtualNetwork",
+        "type": "Microsoft.Network/virtualNetworks",
+        "apiVersion": "2023-04-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "addressSpace": {
+                "addressPrefixes": [
+                    "10.0.0.0/16"
+                ]
+            },
+            "subnets": [
+                {
+                    "name": "DemoSubnet",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
+        }
+    }
+// Network Security Group
+    {
+        "name": "DemoNSG",
+        "type": "Microsoft.Network/networkSecurityGroups",
+        "apiVersion": "2023-04-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "securityRules": [
+                {
+                    "name": "AllowSSH",
+                    "properties": {
+                        "protocol": "Tcp",
+                        "sourcePortRange": "*",
+                        "destinationPortRange": "22",
+                        "sourceAddressPrefix": "*",
+                        "destinationAddressPrefix": "*",
+                        "access": "Allow",
+                        "priority": 1000,
+                        "direction": "Inbound"
+                    }
+                }
+            ]
+        }
+    }
+// Network Interface
+    {
+        "name": "DemoNIC",
+        "type": "Microsoft.Network/networkInterfaces",
+        "apiVersion": "2023-04-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "ipConfigurations": [
+                {
+                    "name": "ipconfig1",
+                    "properties": {
+                        "subnet": {
+                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', 'DemoVirtualNetwork', 'DemoSubnet')]"
+                        },
+                        "privateIPAllocationMethod": "Dynamic"
+                    }
+                }
+            ],
+            "networkSecurityGroup": {
+                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'DemoNSG')]"
+            }
+        }
+    }
+// Virtual Machine
+    {
+        "name": "DemoVM",
+        "type": "Microsoft.Compute/virtualMachines",
+        "apiVersion": "2023-03-01",
+        "location": "[resourceGroup().location]",
+        "properties": {
+            "hardwareProfile": {
+                "vmSize": "Standard_DS1_v2"
+            },
+            "osProfile": {
+                "computerName": "DemoVM",
+                "adminUsername": "azureuser",
+                "adminPassword": "P@ssw0rd1234!"
+            },
+            "storageProfile": {
+                "imageReference": {
+                    "publisher": "Canonical",
+                    "offer": "UbuntuServer",
+                    "sku": "18.04-LTS",
+                    "version": "latest"
+                },
+                "osDisk": {
+                    "createOption": "FromImage"
+                }
+            },
+            "networkProfile": {
+                "networkInterfaces": [
+                    {
+                        "id": "[resourceId('Microsoft.Network/networkInterfaces', 'DemoNIC')]"
+                    }
+                ]
+            }
+        }
+    }
+
+
