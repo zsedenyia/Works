@@ -14,6 +14,3 @@ az group delete --name demo02 --yes --no-wait
 
 
 
-Run the next command in Get-bash mode
-
-./provision_vm.sh -> this installs ubuntu with all the settings from all 3 file - scratchpad, cloud-init and provision
