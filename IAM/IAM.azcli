@@ -1,9 +1,9 @@
 az login
 
 az ad user create \
-  --display-name Alexandra Zettervall \
-  --user-principal-name alexandra@yourdomain.onmicrosoft.com \
-  --password Jamie2019 \
+  --display-name John Doe \
+  --user-principal-name Johndoe@yourdomain.onmicrosoft.com \
+  --password Strongpassword \
   --force-change-password-next-login false
 
 az ad group create \
