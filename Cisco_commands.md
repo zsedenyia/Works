@@ -55,6 +55,10 @@ ip ssh version 2
 
 show ssh
 
+# Login to switch or router via ssh
+
+SSH -l "username" "ip address"
+
 # secure remote telnet / SSH access
 
 line vty 0 4
