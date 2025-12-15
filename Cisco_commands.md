@@ -47,7 +47,7 @@ transport input ssh
 login local
 exit
 
-# Configure SSH 2.0
+# Configure SSH 2.0 - more secure
 
 ip ssh version 2
 
@@ -61,14 +61,6 @@ line vty 0 4
 password password
 login
 transport input {ssh | telnet | none | all}
-
-# Configure SSH Version 2 - more secure
-
-ip ssh version 2
-
-# provide legal notification
-
-banner delimiter message delimiter
 
 # Configure interface ex. vlan 1
 
