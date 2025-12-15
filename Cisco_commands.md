@@ -8,18 +8,25 @@ Configure terminal    or config t
 
 # Change router or switch name
 
-hostname "hostname"
+hostname R1 or SW1
+
+# Secure priviledge exec mode 
+
+enable secret password - type 7 encryption - can looked up on the net
+
+# Secure all passwords in the config file 
+
+service password-encryption
+
+# enable secret - md5 encryption - more secure
+
+enable secret "password"
 
 # secure user exec mode 
 
 line console 0
 password "password"
 login
-
-
-# Secure priviledge exec mode 
-
-enable secret password
 
 # Banner for the message of the day
 
@@ -33,9 +40,7 @@ password password
 login
 transport input {ssh | telnet | none | all}
 
-# Secure all passwords in the config file 
 
-service password-encryption
 
 # provide legal notification
 
