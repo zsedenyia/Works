@@ -66,6 +66,10 @@ password password
 login
 transport input {ssh | telnet | none | all}
 
+# Configure default  gateway
+
+ip default-gateway "ip address of the router"
+
 # Configure interface ex. vlan 1
 
 Interface vlan 1
