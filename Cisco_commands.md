@@ -32,6 +32,28 @@ login
 
 banner motd #No Authorized access allowed!#
 
+# Set domain name 
+ip domain-name cisco.com
+
+# generate 1024 bit rsa key pair
+
+crypto key generate rsa
+
+# Create a local user "admin" with the password "ccna".  Set all vty lines to use ssh and local login for remote connections. Exit out to global configuration mode.
+
+Username admin password ccna
+line vty 0 15
+transport input ssh
+login local
+exit
+
+# Configure SSH 2.0
+
+ip ssh version 2
+
+# to check ssh connection to the device 
+
+show ssh
 
 # secure remote telnet / SSH access
 
@@ -40,7 +62,9 @@ password password
 login
 transport input {ssh | telnet | none | all}
 
+# Configure SSH Version 2 - more secure
 
+ip ssh version 2
 
 # provide legal notification
 
