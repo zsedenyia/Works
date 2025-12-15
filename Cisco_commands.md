@@ -21,6 +21,11 @@ login
 
 enable secret password
 
+# Banner for the message of the day
+
+banner motd #No Authorized access allowed!#
+
+
 # secure remote telnet / SSH access
 
 line vty 0 4
