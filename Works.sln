@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyAspNet App - STI", "MyAspNet App - STI", "{FD155149-63B5-EEAC-00F6-29AB92BEC904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAspNetApp", "MyAspNet App - STI\MyAspNetApp.csproj", "{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED03C8F0-A9DD-F086-CDB0-69835B1DC2BD} = {FD155149-63B5-EEAC-00F6-29AB92BEC904}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1169611B-A231-408D-BA39-AD7EC65EC638}
+	EndGlobalSection
+EndGlobal
