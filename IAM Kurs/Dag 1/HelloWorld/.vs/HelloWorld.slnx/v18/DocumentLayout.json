@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hifis\\Documents\\Developer\\Works\\IAM Kurs\\Dag 1\\HelloWorld\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{017E64BF-C772-4482-B1AB-54BF33F16EC9}|HelloWorld\\HelloWorld.csproj|c:\\users\\hifis\\documents\\developer\\works\\iam kurs\\dag 1\\helloworld\\helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{017E64BF-C772-4482-B1AB-54BF33F16EC9}|HelloWorld\\HelloWorld.csproj|solutionrelative:helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3A798C92-DA22-B784-11D5-249F2DEA19E6}|HelloWorld\\HelloWorld.csproj|c:\\users\\hifis\\documents\\developer\\works\\iam kurs\\dag 1\\helloworld\\helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A798C92-DA22-B784-11D5-249F2DEA19E6}|HelloWorld\\HelloWorld.csproj|solutionrelative:helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +24,7 @@
               "RelativeDocumentMoniker": "HelloWorld\\Program.cs",
               "ToolTip": "C:\\Users\\hifis\\Documents\\Developer\\Works\\IAM Kurs\\Dag 1\\HelloWorld\\HelloWorld\\Program.cs",
               "RelativeToolTip": "HelloWorld\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T13:28:12.418Z",
               "EditorCaption": ""
