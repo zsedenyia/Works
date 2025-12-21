@@ -86,9 +86,15 @@ copy running-config startup-config
 
 write
 
-# To see IP interface 
+# To see IP interface on IPv4
 
 show ip inteface brief
 
+# To see Ipv6 Interface
 
+show ipv6 interface brief
+
+# to see IPv6 route - 
+
+show ipv6 route
 
