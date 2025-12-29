@@ -98,3 +98,7 @@ show ipv6 interface brief
 
 show ipv6 route
 
+# Cisco Discovery protocol - CDP
+
+Show cdp neighbors
+
