@@ -102,3 +102,19 @@ show ipv6 route
 
 Show cdp neighbors
 
+# If cdp is not enabled on the cisco interface
+
+Configure terminal
+cdp run
+
+# In case you need to configure serial port 0/0/1
+
+Interface s0/0/1
+
+No cdp enable 
+
+exit
+
+# no you can do a cdp neighbor command
+show cdp neighbors
+
