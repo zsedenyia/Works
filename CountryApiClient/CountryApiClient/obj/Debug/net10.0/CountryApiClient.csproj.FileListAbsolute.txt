@@ -1,0 +1,15 @@
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.AssemblyInfoInputs.cache
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.AssemblyInfo.cs
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.csproj.CoreCompileInputs.cache
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.sourcelink.json
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\bin\Debug\net10.0\CountryApiClient.exe
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\bin\Debug\net10.0\CountryApiClient.deps.json
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\bin\Debug\net10.0\CountryApiClient.runtimeconfig.json
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\bin\Debug\net10.0\CountryApiClient.dll
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\bin\Debug\net10.0\CountryApiClient.pdb
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.dll
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\refint\CountryApiClient.dll
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.pdb
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\CountryApiClient.genruntimeconfig.cache
+C:\Users\hifis\Documents\Works\CountryApiClient\CountryApiClient\obj\Debug\net10.0\ref\CountryApiClient.dll

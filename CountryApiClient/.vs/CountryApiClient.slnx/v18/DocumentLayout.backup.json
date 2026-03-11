@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hifis\\Documents\\Works\\CountryApiClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F929D847-10CB-30BF-D78B-F7988141F260}|CountryApiClient\\CountryApiClient.csproj|c:\\users\\hifis\\documents\\works\\countryapiclient\\countryapiclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F929D847-10CB-30BF-D78B-F7988141F260}|CountryApiClient\\CountryApiClient.csproj|solutionrelative:countryapiclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hifis\\Documents\\Works\\CountryApiClient\\CountryApiClient\\Program.cs",
+              "RelativeDocumentMoniker": "CountryApiClient\\Program.cs",
+              "ToolTip": "C:\\Users\\hifis\\Documents\\Works\\CountryApiClient\\CountryApiClient\\Program.cs",
+              "RelativeToolTip": "CountryApiClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T14:20:54.141Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

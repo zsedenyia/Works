@@ -16,15 +16,32 @@
 terraform {
   required_providers {
     azurerm = {
-      source  = "Hashicorp/azurerm"
+      source  = "hashicorp/azurerm"
       version = "~> 4.8.0"
     }
   }
-  required_version = ">=1.9.0"
+  required_version = ">=1.14.6"
 }
 provider "azurerm" {
-  features {
-
-  }
+  features {}
+  subscription_id = "0c7b76e5-0b4f-4730-8f85-fb86f79473fc"
 }
 
+# Fixed: Changed azurearm to azurerm
+resource "azurerm_resource_group" "example" {
+  name     = "terraform-resources"
+  location = "Sweden Central" # Note: Azure usually expects "Sweden Central" (with space)
+}
+
+resource "azurerm_storage_account" "example" {
+  name                     = "terraformtest101"
+  # Fixed: Reference now matches the corrected resource type above
+  resource_group_name      = azurerm_resource_group.example.name
+  location                 = azurerm_resource_group.example.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+
+  tags = {
+    environment = "staging"
+  }
+}

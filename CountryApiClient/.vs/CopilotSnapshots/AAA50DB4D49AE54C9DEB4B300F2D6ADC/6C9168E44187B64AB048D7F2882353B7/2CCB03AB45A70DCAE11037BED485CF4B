@@ -1,0 +1,38 @@
+﻿using CountryApiClient.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Linq;
+using System.Net.Http;
+
+namespace CountryApiClient.Services
+{
+    public class CountryService
+    {
+        private readonly HttpClient _httpClient;
+
+        private readonly string _baseUrl = "http://restcountries.com/v3.1";
+        private readonly string _endpoint = "/name";
+
+        public CountryService()
+        {
+            _httpClient = new HttpClient();
+        }
+
+        public void DisplayCountry(CountryModel country)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\n----Data Fetched Successfully----\n");
+            Console.ResetColor();
+
+            Console.WriteLine($"Common Name: {country.Name.Common}");
+            Console.WriteLine($"official Name: {country.Name.Official}");
+
+            var native = country.Name.NativeName.Values.FirstOrDefault();
+            if (native != null)
+            {
+                Console.WriteLine($"Native Common: {native.Common}");
+            }
+        }
+    }
+}
