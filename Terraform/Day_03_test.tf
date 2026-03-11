@@ -12,6 +12,26 @@
 # Apply and test
 # source ~/.bashrc
 
+# to initialize the infrastructure
+# tf init
+
+# To see the changes to the infrastucture
+# tf plan
+
+# To Validate the infrastructure, run the command
+# tf validate
+
+# with this command will be shown 'what will be created'
+# tf plan | grep "will be created"
+
+# to create infrastructure from code
+# tf apply
+
+# to update infrastructure, like change something
+# tf plan -> tf apply --auto-approve
+
+# to destroy the entire Infrastructure in Azure
+# tf destroy --auto-approve
 
 terraform {
   required_providers {
