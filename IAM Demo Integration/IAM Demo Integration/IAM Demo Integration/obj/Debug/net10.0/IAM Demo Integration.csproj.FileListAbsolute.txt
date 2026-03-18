@@ -1,0 +1,15 @@
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\bin\Debug\net10.0\IAM Demo Integration.exe
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\bin\Debug\net10.0\IAM Demo Integration.deps.json
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\bin\Debug\net10.0\IAM Demo Integration.runtimeconfig.json
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\bin\Debug\net10.0\IAM Demo Integration.dll
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\bin\Debug\net10.0\IAM Demo Integration.pdb
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.AssemblyInfoInputs.cache
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.AssemblyInfo.cs
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.csproj.CoreCompileInputs.cache
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.sourcelink.json
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.dll
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\refint\IAM Demo Integration.dll
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.pdb
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\IAM Demo Integration.genruntimeconfig.cache
+C:\Users\hifis\Documents\Works\IAM Demo Integration\IAM Demo Integration\IAM Demo Integration\obj\Debug\net10.0\ref\IAM Demo Integration.dll
