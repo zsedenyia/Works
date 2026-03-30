@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|solutionrelative:iam demo integration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|c:\\users\\hifis\\documents\\works\\iam demo integration\\iam demo integration\\iam demo integration\\iamuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|solutionrelative:iam demo integration\\iamuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|c:\\users\\hifis\\documents\\works\\iam demo integration\\iam demo integration\\iam demo integration\\hruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|solutionrelative:iam demo integration\\hruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|c:\\users\\hifis\\documents\\works\\iam demo integration\\iam demo integration\\iam demo integration\\iamuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E334B15-873D-5561-6506-822106F08DAD}|IAM Demo Integration\\IAM Demo Integration.csproj|solutionrelative:iam demo integration\\iamuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,27 +32,27 @@
               "RelativeDocumentMoniker": "IAM Demo Integration\\Program.cs",
               "ToolTip": "C:\\Users\\hifis\\Documents\\Works\\IAM Demo Integration\\IAM Demo Integration\\IAM Demo Integration\\Program.cs",
               "RelativeToolTip": "IAM Demo Integration\\Program.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAuwHsAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAQwHsAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T10:00:19.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "HrUser.cs",
               "DocumentMoniker": "C:\\Users\\hifis\\Documents\\Works\\IAM Demo Integration\\IAM Demo Integration\\IAM Demo Integration\\HrUser.cs",
               "RelativeDocumentMoniker": "IAM Demo Integration\\HrUser.cs",
               "ToolTip": "C:\\Users\\hifis\\Documents\\Works\\IAM Demo Integration\\IAM Demo Integration\\IAM Demo Integration\\HrUser.cs",
               "RelativeToolTip": "IAM Demo Integration\\HrUser.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxEAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-17T09:35:56.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IAMuser.cs",
               "DocumentMoniker": "C:\\Users\\hifis\\Documents\\Works\\IAM Demo Integration\\IAM Demo Integration\\IAM Demo Integration\\IAMuser.cs",
               "RelativeDocumentMoniker": "IAM Demo Integration\\IAMuser.cs",

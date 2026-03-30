@@ -1,0 +1,168 @@
+# Login to Azure portal
+az login
+
+#Create a new group - new name - new location
+az group create --name AVD-RG --location westeurope
+
+# Create the Security Group for Admins
+az ad group create --display-name AVD-Admins --mail-nickname Avd-Admins
+
+# Create the Security Group for Users
+az ad group create --display-name AVD-Users --mail-nickname Avd-Users
+
+
+# Add a user to each Azure AD security group
+# Variables
+GROUP1="AVD-Admins"
+GROUP2="AVD-Users"
+USER1="user 1"
+USER2="user 2"
+
+# Get object IDs
+GROUP1_ID=$(az ad group show --group "$GROUP1" --query id -o tsv)
+GROUP2_ID=$(az ad group show --group "$GROUP2" --query id -o tsv)
+USER1_ID=$(az ad user show --id "$USER1" --query id -o tsv)
+USER2_ID=$(az ad user show --id "$USER2" --query id -o tsv)
+
+# Add users to groups
+az ad group member add --group "$GROUP1_ID" --member-id "$USER1_ID"
+az ad group member add --group "$GROUP2_ID" --member-id "$USER2_ID"
+
+# Basic VNet creation
+
+az network vnet create \
+  --name AVD-VNet \
+  --resource-group AVD-RG \
+  --location westeurope \
+  --address-prefix 10.0.0.0/16 \
+  --subnet-name AVD-Subnet \
+  --subnet-prefix 10.0.1.0/24
+
+  # Install the Azure CLI AVD extension
+
+az extension add --name desktopvirtualization
+
+# Create a Host Pool
+
+az desktopvirtualization hostpool create \
+  --resource-group AVD-RG \
+  --name AVD-Hostpool \
+  --location westeurope \
+  --friendly-name "AVD Host Pool" \
+  --host-pool-type Pooled \
+  --load-balancer-type DepthFirst \
+  --max-session-limit 5 \
+  --preferred-app-group-type Desktop \
+  --personal-desktop-assignment-type Automatic \
+  --start-vm-on-connect false
+
+# Update your hostpool properties 
+
+az desktopvirtualization hostpool update \
+  --name "AVD-Hostpool" \
+  --resource-group "AVD-RG" \
+  --custom-rdp-property "targetisaadjoined:i:1;enablerdpprofanity:i:1;"
+  
+# Create Variables to Desktop Application Group (DAG)
+
+RG="AVD-RG"
+LOCATION="westeurope"
+HOSTPOOL="AVD-Hostpool"
+APPGROUP="AVD-DAG"
+SUBID=$(az account show --query id -o tsv)
+HOSTPOOL_ID="/subscriptions/$SUBID/resourceGroups/$RG/providers/Microsoft.DesktopVirtualization/hostPools/$HOSTPOOL"
+
+# Create Application Group using Variables
+
+az desktopvirtualization applicationgroup create \
+  --resource-group $RG \
+  --name $APPGROUP \
+  --location $LOCATION \
+  --application-group-type Desktop \
+  --host-pool-arm-path $HOSTPOOL_ID \
+  --friendly-name "AVD Desktop Group"
+
+# Verify the host pool ARM path
+
+az desktopvirtualization hostpool show \
+  --resource-group $RG \
+  --name $HOSTPOOL \
+  --query id -o tsv
+
+# Create a Workspace with variables and Link DAG to Workspace #
+
+# Workspace Variables
+
+RG="AVD-RG"
+LOCATION="WestEurope"
+WORKSPACE="AVD-Workspace"
+DAG="SessionDesktop"
+SUBID=$(az account show --query id -o tsv)
+DAG_ID="/subscriptions/$SUBID/resourceGroups/$RG/providers/Microsoft.DesktopVirtualization/applicationGroups/$DAG"
+
+# Create Workspace With Variables
+
+az desktopvirtualization workspace create \
+  --resource-group $RG \
+  --name $WORKSPACE \
+  --location $LOCATION \
+  --friendly-name "AVD Workspace"
+
+# Link the DAG to The Workspace - If this does not work - try below
+
+az desktopvirtualization workspace update \
+  --resource-group $RG \
+  --name $WORKSPACE \
+  --application-group-references $DAG_ID
+
+# Link the DAG to the Workspace - Sub-ID = Subscription ID
+
+az desktopvirtualization workspace update \
+  --resource-group AVD-RG \
+  --name AVD-Workspace \
+  --application-group-references "/subscriptions/<SUB-ID>/resourceGroups/AVD-RG/providers/Microsoft.DesktopVirtualization/applicationGroups/AVD-DAG"
+
+
+# Install Azure Quota extension
+
+az extension add --name quota
+
+# CPU Quota Request
+
+az quota request submit \
+  --resource-name standardBsv2Family \
+  --resource-type dedicated \
+  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/providers/Microsoft.Compute/locations/westeurope" \
+  --limit 4 \
+  --unit Count
+
+
+# Deploy a SessionHost VM (Azure Virtual Desktop)
+
+az vm create \
+  --resource-group AVD-RG \
+  --name AVD-SH-01 \
+  --location westeurope \
+  --image "MicrosoftWindowsDesktop:windows-11:win11-23h2-avd:latest" \
+  --size Standard_B2ms \
+  --admin-username Admin \
+  --admin-password "AdminPassword123!" \
+  --vnet-name AVD-VNET \
+  --subnet AVD-Subnet \
+  --custom-data cloud-init.txt
+
+ # Assign a User to the Desktop Application group
+
+ az role assignment create \
+  --assignee "$USER1" \
+  --role "Desktop Virtualization User" \
+  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/resourceGroups/AVD-RG/providers/Microsoft.DesktopVirtualization/applicationGroups/AVD-DAG" 
+
+# Assign "Virtual Machine User Login" at the Resource Group level 
+# (This covers all VMs in the AVD-RG)
+az role assignment create \
+  --assignee "$GROUP_ID" \
+  --role "Virtual Machine User Login" \
+  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/resourceGroups/AVD-RG"
+
+# download windows app installer for AVD
