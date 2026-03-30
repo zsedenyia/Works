@@ -1,6 +1,10 @@
+# Local terraform directory (the big binaries)
 .terraform/
+# State files (contain secrets!)
 *.tfstate
 *.tfstate.*
+
 .terraform.lock.hcl
+# Variables files (contain secrets!)
 .var.sh
 *.tfvars
