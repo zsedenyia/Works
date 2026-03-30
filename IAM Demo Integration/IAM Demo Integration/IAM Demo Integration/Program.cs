@@ -10,8 +10,8 @@
 
             var bigBoss = new HrUser
             {
-                Fname = "William",
-                Lname = "Gross",
+                Fname = "Mathieu_van_Der",
+                Lname = "Poel",
                 EmployeeId = 1111,
                 JobTitle = "Big Boss",
                 PrivateEmail = "Mathieu_Van_der@poel.nu",
