@@ -149,6 +149,7 @@ az vm create \
   --admin-password "AdminPassword123!" \
   --vnet-name AVD-VNET \
   --subnet AVD-Subnet \
+  --OS-disk-sku StandardSSD_LRS \
   --custom-data cloud-init.txt
 
  # Assign a User to the Desktop Application group
