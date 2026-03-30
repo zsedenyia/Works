@@ -157,13 +157,13 @@ az vm create \
  az role assignment create \
   --assignee "$USER1" \
   --role "Desktop Virtualization User" \
-  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/resourceGroups/AVD-RG/providers/Microsoft.DesktopVirtualization/applicationGroups/AVD-DAG" 
+  --scope "/subscriptions/<SUB-ID>/resourceGroups/AVD-RG/providers/Microsoft.DesktopVirtualization/applicationGroups/AVD-DAG" 
 
 # Assign "Virtual Machine User Login" at the Resource Group level 
 # (This covers all VMs in the AVD-RG)
 az role assignment create \
   --assignee "$GROUP_ID" \
   --role "Virtual Machine User Login" \
-  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/resourceGroups/AVD-RG"
+  --scope "/subscriptions/<SUB-ID>/resourceGroups/AVD-RG"
 
 # download windows app installer for AVD - Note* : this way will work in the future but for now it works via Microsoft RDP client
