@@ -1,7 +1,7 @@
-#  az login --tenant 1359854f-2e91-42f1-800f-38df9a47df38
+#  az login --tenant <TENANT_ID>
 
 # Create a service principle with the following command and use the output to fill in the values below:
-#  MSYS_NO_PATHCONV=1 az ad sp create-for-rbac -n az-demo --role Contributor --scopes /subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc
+#  MSYS_NO_PATHCONV=1 az ad sp create-for-rbac -n az-demo --role Contributor --scopes /subscriptions/<SUBSCRIPTION_ID>
 
 # Force create bashhrc file with the following command to avoid path conversion issues on Windows when using Terraform:
 # echo -e "export MSYS_NO_PATHCONV=1\nalias tf='terraform'" > ~/.bashrc
@@ -44,7 +44,7 @@ terraform {
 }
 provider "azurerm" {
   features {}
-  subscription_id = "0c7b76e5-0b4f-4730-8f85-fb86f79473fc"
+  subscription_id = "<SUBSCRIPTION_ID>"
 }
 
 # Fixed: Changed azurearm to azurerm
