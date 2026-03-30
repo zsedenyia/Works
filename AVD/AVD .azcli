@@ -127,7 +127,7 @@ az desktopvirtualization workspace update \
 
 az extension add --name quota
 
-# CPU Quota Request
+# CPU Quota Request - In case you dont have any in your region - you can request.
 
 az quota request submit \
   --resource-name standardBsv2Family \
@@ -149,8 +149,8 @@ az vm create \
   --admin-password "AdminPassword123!" \
   --vnet-name AVD-VNET \
   --subnet AVD-Subnet \
-  --OS-disk-sku StandardSSD_LRS \
-  --custom-data cloud-init.txt
+  --storage-sku StandardSSD_LRS \
+  
 
  # Assign a User to the Desktop Application group
 
@@ -166,4 +166,4 @@ az role assignment create \
   --role "Virtual Machine User Login" \
   --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/resourceGroups/AVD-RG"
 
-# download windows app installer for AVD
+# download windows app installer for AVD - Note* : this way will work in the future but for now it works via Microsoft RDP client
