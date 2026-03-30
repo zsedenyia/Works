@@ -132,7 +132,7 @@ az extension add --name quota
 az quota request submit \
   --resource-name standardBsv2Family \
   --resource-type dedicated \
-  --scope "/subscriptions/0c7b76e5-0b4f-4730-8f85-fb86f79473fc/providers/Microsoft.Compute/locations/westeurope" \
+  --scope "/subscriptions/<SUB-ID>/providers/Microsoft.Compute/locations/westeurope" \
   --limit 4 \
   --unit Count
 
