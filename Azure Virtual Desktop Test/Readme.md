@@ -12,5 +12,6 @@ The coming weeks, I will try to create again the AVD solution but this time in J
 
 In pooled virtual desktop, when a user login to a virtual desktop and example saves a document. The system saves it.
 But when you log in the next time, Its not always possible that you will login to the same virtual desktop and you might find your saved document.
+The system log you in to a different pooled virtual Desktop.
 Thats why there is a shared drive and fslogic, when you login to a virtual drive, Azure will attach your private folder to the desktop you loged in,
 so you can save your files on the shared drive under your name. Also need to configure NTFS file permissions and so on. 
