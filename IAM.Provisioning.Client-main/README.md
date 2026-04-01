@@ -1,4 +1,6 @@
 # IAM.Provisioning.Client
 
-Länk till beskrivningen av projektuppgiften: <br>
-https://docs.google.com/document/d/1QvnQyZm1QLw0vxRXMgjBUrXr4KEFpcQr3j-E58ibEII/edit?usp=sharing
+Provision Users from a HR system to a katalog service from a jason file. 
+Automatic company e-mail generating from Full name with converting å,ä,ö.
+
+
