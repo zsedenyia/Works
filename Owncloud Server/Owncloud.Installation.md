@@ -7,16 +7,20 @@
 # Install Clam-AV - Ubuntu free Antivirus ->
 
 # Upate and Upgrade the Ubuntu system to its latest
-sudo apt update && sudo apt upgrade -y
+
+   sudo apt update && sudo apt upgrade -y
 
 # Install Clam-AV
-sudo apt install clamav clamav-daemon -y
+
+   sudo apt install clamav clamav-daemon -y
 
 # Update clam-AV
 
-sudo systemctl stop clamav-freshclam
-sudo freshclam
-sudo systemctl start clamav-freshclam
+   sudo systemctl stop clamav-freshclam
+
+   sudo freshclam
+   
+   sudo systemctl start clamav-freshclam
 
 # search for viruses
 
