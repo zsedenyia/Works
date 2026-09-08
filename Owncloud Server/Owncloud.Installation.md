@@ -24,99 +24,88 @@
 
 # search for viruses
 
-clamscan -r --bell ~/
+   clamscan -r --bell ~/
 
 ####################################
 
 # Install G-Parted -> This is similar to disk manager on windows
 
-sudo apt install gparted
+   sudo apt install gparted
 
 ####################################
 
 # Install Apache HTTP Server on Ubuntu
 
-sudo apt update
-sudo apt install apache2 -y
-sudo service apache2 stop																											
-sudo service apache2 start		
-sudo service apache2 restart
+   sudo apt update
+   sudo apt install apache2 -y
+   sudo service apache2 stop																											
+   sudo service apache2 start		
+   sudo service apache2 restart
 
 ####################################
 
 Install PHP 7.4 - Owncloud 10.15 works only PHP 7.4
 
-sudo apt install software-properties-common -y
-sudo add-apt-repository ppa:ondrej/php -y
-sudo apt update
-sudo apt install php7.4 php7.4-{opcache,gd,curl,mysqlnd,intl,json,ldap,mbstring,imagick,cli,bcmath,mysql,xml,zip} -y
+   sudo apt install software-properties-common -y
+   sudo add-apt-repository ppa:ondrej/php -y
+   sudo apt update
+   sudo apt install php7.4 php7.4-{opcache,gd,curl,mysqlnd,intl,json,ldap,mbstring,imagick,cli,bcmath,mysql,xml,zip} -y
 
-php -v   -> control if php installed correctly
+   php -v   -> control if php installed correctly
 
 #####################################
 
 # Install MariaDB Database Server
 
-sudo apt install mariadb-server -y
-
-sudo service mysql stop
-sudo service mysql start
-sudo service mysql restart
-
-sudo mysql_secure_installation
+   sudo apt install mariadb-server -y
+   sudo service mysql stop
+   sudo service mysql start
+   sudo service mysql restart
+   sudo mysql_secure_installation
 
 ## Enter current password for root: press enter (We have no password)
 
-## Setup new password: Y -> yes
-## Enter Database Root password: "Your Password"
-
-## Disallow root login remotely: -> press Y
-   
-## Remove test database and access to it: press Y
-
-## Reload privilege tables now: press Y
-
-   
-## remove Anonymous users: press Y
+   Setup new password: Y -> yes
+   Enter Database Root password: "Your Password"
+   Disallow root login remotely: -> press Y
+   Remove test database and access to it: press Y
+   Reload privilege tables now: press Y
+   remove Anonymous users: press Y
    
 ## Now create a new database with the code below:
 
-sudo mysql -u root -p
+   sudo mysql -u root -p
 
-CREATE DATABASE owncloud;
-CREATE USER 'Username'@'localhost' IDENTIFIED BY 'Your_password ';
-GRANT ALL PRIVILEGES ON owncloud.* TO 'Username'@'localhost' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-EXIT;
+   CREATE DATABASE owncloud;
+   CREATE USER 'Username'@'localhost' IDENTIFIED BY 'Your_password ';
+   GRANT ALL PRIVILEGES ON owncloud.* TO 'Username'@'localhost' WITH GRANT OPTION;
+   FLUSH PRIVILEGES;
+   EXIT;
 
 #######################################
 
-# Download owncloud
-
 # Download unzip
 
-sudo apt install unzip      
+   sudo apt install unzip      
 
 # Download Latest owncloud Version
 
-wget https://download.owncloud.com/server/stable/owncloud-latest.zip -P /tmp
+   wget https://download.owncloud.com/server/stable/owncloud-latest.zip -P /tmp
 
 # unpack it to the var/www folder ##   
 
-sudo unzip /tmp/owncloud-latest.zip  -d /var/www
+   sudo unzip /tmp/owncloud-latest.zip  -d /var/www
 
 # Set permission
 
-sudo chown -R www-data:www-data /var/www/owncloud/
-sudo chmod -R 755 /var/www/owncloud/
+   sudo chown -R www-data:www-data /var/www/owncloud/
+   sudo chmod -R 755 /var/www/owncloud/
 
 #########################################
 
-# Configure owncloud Site
+# Configure owncloud Site & Open Owncloud Configuration File
 
-# Open Owncloud Configuration File
-
-sudo nano /etc/apache2/sites-available/owncloud.conf
+   sudo nano /etc/apache2/sites-available/owncloud.conf
 
 ## Copy All These Below ##
 
@@ -153,17 +142,17 @@ CTRL + X  and YES = save
 
 # Run the following commands all at once:
 
-sudo a2ensite owncloud.conf
-sudo a2enmod rewrite
-sudo a2enmod headers
-sudo a2enmod env
-sudo a2enmod dir
-sudo a2enmod mime
+   sudo a2ensite owncloud.conf
+   sudo a2enmod rewrite
+   sudo a2enmod headers
+   sudo a2enmod env
+   sudo a2enmod dir
+   sudo a2enmod mime
 
 
 # Restart apache server
 
-sudo systemctl restart apache2
+   sudo systemctl restart apache2
 
 #################################################
 
@@ -196,7 +185,7 @@ sudo systemctl restart apache2
 
 ##  Owncloud configuration file
 
-sudo nano /etc/apache2/sites-available/owncloud.conf
+   sudo nano /etc/apache2/sites-available/owncloud.conf
 
 ## CTRL + X and Y to save
 
